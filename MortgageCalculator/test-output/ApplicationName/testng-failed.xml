@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ApplicationName]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="RegressionTesting(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="appurl" value="https://candidate.psiexams.com/index.jsp"/>
+    <groups>
+      <run>
+        <include name="adhoc"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Homework.dataProvider">
+        <methods>
+          <include name="verifyingErrorMessageForMissingMandatoryFields" invocation-numbers="0"/>
+          <include name="launchApp"/>
+          <include name="clickonCreateAnAccountLink"/>
+          <include name="quitapp"/>
+        </methods>
+      </class> <!-- Homework.dataProvider -->
+    </classes>
+  </test> <!-- RegressionTesting(failed) -->
+</suite> <!-- Failed suite [ApplicationName] -->
